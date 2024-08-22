@@ -51,7 +51,6 @@ footer {
     width: 100%;
     font-size: 2rem;
     font-family: sans-serif;
-    text-transform: lowercase;
 }
 
 .textarea-usuario::placeholder {
@@ -251,7 +250,7 @@ footer {
 
 @media (max-width: 290px) {
     .seccion-resultado {
-        word-break: break-all;
+        /* word-break: break-all; */
     }
 
     .sugerencia-limpiar {
