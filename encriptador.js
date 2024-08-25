@@ -4,6 +4,7 @@
 // "o"  "ober"
 // "u"  "ufat"
 
+
 const textoUsuario = document.getElementById("textarea-usuario");
 const textoEncriptado = document.getElementById("texto-encriptado");
 const areaTextoEncriptado = document.getElementById("area-texto-encriptado");
@@ -12,6 +13,7 @@ const muñeco = document.getElementById("muñeco");
 const copiar = document.getElementById("botones-seccion2");
 const requisitos = /^[a-z\s]+$/;
 
+// Función para reiniciar la interfaz
 function limpiar() {
   textoUsuario.value = "";
   textoEncriptado.innerHTML = "";
@@ -21,6 +23,7 @@ function limpiar() {
   copiar.style.display = "none";
 }
 
+// Función para ajustar la interfaz al encriptar/desencriptar el texto
 function mostrarResultado() {
   areaTextoEncriptado.style.display = "block";
   muñeco.style.display = "none";
@@ -28,6 +31,7 @@ function mostrarResultado() {
   copiar.style.display = "block";
 }
 
+// Función para encriptar el texto
 function encriptar(texto = textoUsuario.value) {
   if (textoUsuario.value === "") {
     limpiar();
@@ -46,6 +50,7 @@ function encriptar(texto = textoUsuario.value) {
   }
 }
 
+// Función para desencriptar el texto
 function desencriptar(texto = textoUsuario.value) {
   if (textoUsuario.value === "") {
     limpiar();
@@ -64,6 +69,7 @@ function desencriptar(texto = textoUsuario.value) {
   }
 }
 
+// Función para copiar al cortapapeles
 function botonCopiar() {
   navigator.clipboard.writeText(textoEncriptado.innerHTML);
 }

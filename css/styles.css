@@ -75,7 +75,6 @@ footer {
     align-items: center;
     font-family: sans-serif;
     box-sizing: border-box;
-    word-break: break-all;
     gap: 1rem;
 }
 
@@ -89,7 +88,6 @@ footer {
     justify-content: space-between;
     box-sizing: border-box;
     flex-wrap: wrap;
-    word-break: break-all;
 }
 
 .boton-encriptar {
@@ -149,10 +147,9 @@ footer {
     padding: 4rem;
     font-size: 1.5rem;
     font-family: sans-serif;
-    text-align: justify;
+    text-align: center;
     box-sizing: border-box;
     overflow: auto;
-    word-break: break-all;
 }
 
 .texto-encriptado {
@@ -227,6 +224,7 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+        word-break: break-all;
     }
 
     .boton-desencriptar,
@@ -249,12 +247,13 @@ footer {
 }
 
 @media (max-width: 290px) {
-    .seccion-resultado {
-        /* word-break: break-all; */
-    }
-
     .sugerencia-limpiar {
         flex-wrap: wrap;
         justify-content: center;
     }
 }
+
+@media (max-width: 200px) {
+    .seccion-resultado {
+        word-break: break-all;
+    }
